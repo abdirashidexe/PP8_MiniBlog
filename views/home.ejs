@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Blog</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <h1>Create a New Post</h1>
-    <fieldset>
-        <legend>Name</legend>
-        <label>
-            <input type="text">
-        </label>
-    </fieldset>
-    <textarea placeholder="Write your post"></textarea>
+    <form action="thankyou" method="post"></form>
+        <fieldset>
+            <input type="text" placeholder="Your name">
+
+            <input type="text" placeholder="Post title">
+
+            <textarea placeholder="Write your post"></textarea>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
 </body>
 </html>
