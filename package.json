@@ -1,0 +1,29 @@
+{
+  "name": "pp8_mini_blog",
+  "version": "1.0.0",
+  "description": "Use our blog!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdirashidexe/PP8_MiniBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdirashidexe/PP8_MiniBlog/issues"
+  },
+  "homepage": "https://github.com/abdirashidexe/PP8_MiniBlog#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mariadb": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
