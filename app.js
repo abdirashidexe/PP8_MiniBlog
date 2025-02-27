@@ -41,7 +41,7 @@ app.get('/admin', async (req, res) => {
     res.render('admin', { orders });
 });
 
-app.get('/confirmation', (req, res) =>{
+app.post('/confirmation', (req, res) =>{
     // const conn = await connect();
     
     const newPost = {
