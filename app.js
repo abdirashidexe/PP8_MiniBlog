@@ -4,13 +4,13 @@ import dotenv from 'dotenv';
 
 const app = express();
 
-const pool = mariadb.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
-});
+// const pool = mariadb.createPool({
+   // host: process.env.DB_HOST,
+    // user: process.env.DB_USER,
+    // password: process.env.DB_PASSWORD,
+    // database: process.env.DB_NAME,
+    // port: process.env.DB_PORT,
+// });
 
 //Define function to connect to the DB
 async function connect() {
@@ -41,7 +41,7 @@ app.get('/admin', async (req, res) => {
     res.render('admin', { orders });
 });
 
-app.post('/submit', async (req, res) =>{
+app.get('/confirmation', (req, res) =>{
     // const conn = await connect();
     
     const newPost = {
