@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 app.get('/admin', async (req, res) => {
     const conn = await connect();
-    const orders = await conn.query('SELECT * FROM post');
+    const orders = await conn.query('SELECT * FROM posts');
     res.render('admin', { orders });
 });
 
