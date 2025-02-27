@@ -42,7 +42,7 @@ app.get('/admin', async (req, res) => {
 });
 
 app.post('/submit', async (req, res) =>{
-    const conn = await connect();
+    // const conn = await connect();
     
     const newPost = {
         author: req.body.author,
@@ -51,10 +51,10 @@ app.post('/submit', async (req, res) =>{
 
     };
 
-    const insert = conn.query(`INSERT INTO orders 
-        (author, title, content)
-        values (?, ?, ?)`,
-        [ newPost.author, newPost.title, newPost.content ]);
+    // const insert = conn.query(`INSERT INTO orders 
+        // (author, title, content)
+        // values (?, ?, ?)`,
+        // [ newPost.author, newPost.title, newPost.content ]);
 
 
     console.log(newPost);
