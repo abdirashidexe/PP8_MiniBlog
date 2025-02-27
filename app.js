@@ -58,13 +58,11 @@ app.post('/submit', async (req, res) =>{
 
 
     console.log(newPost);
+
+    res.render("confirmation");
 });
 
 app.post('/entries', async (req, res) =>{
-    const conn = await connect();
-});
-
-app.post('/confirmation', async (req, res) =>{
     const conn = await connect();
 });
 
