@@ -41,6 +41,15 @@ app.get('/admin', async (req, res) => {
     res.render('admin', { orders });
 });
 
+app.post('/submit', (req, res) =>{
+    const newPost = {
+        author: req.body.author,
+        title: req.body.title,
+        content: req.body.content
+    };
+    console.log(newPost);
+})
+
 
 //Tell the server to listen on our specified port
 app.listen(PORT, () => {
