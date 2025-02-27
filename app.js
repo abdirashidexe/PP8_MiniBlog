@@ -41,14 +41,32 @@ app.get('/admin', async (req, res) => {
     res.render('admin', { orders });
 });
 
-app.post('/submit', (req, res) =>{
+app.post('/submit', async (req, res) =>{
+    const conn = await connect();
+    
     const newPost = {
         author: req.body.author,
         title: req.body.title,
         content: req.body.content
+
     };
+
+    const insert = conn.query(`INSERT INTO orders 
+        (author, title, content)
+        values (?, ?, ?)`,
+        [ newPost.author, newPost.title, newPost.content ]);
+
+
     console.log(newPost);
-})
+});
+
+app.post('/entries', async (req, res) =>{
+    const conn = await connect();
+});
+
+app.post('/confirmation', async (req, res) =>{
+    const conn = await connect();
+});
 
 
 //Tell the server to listen on our specified port
