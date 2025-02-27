@@ -62,8 +62,9 @@ app.post('/confirmation', (req, res) =>{
     res.render("confirmation");
 });
 
-app.post('/entries', async (req, res) =>{
-    const conn = await connect();
+app.get('/entries', async (req, res) =>{
+    //const conn = await connect();
+    res.render("entries");
 });
 
 
