@@ -50,7 +50,6 @@ app.post('/confirmation',  async(req, res) =>{
         author: req.body.author,
         title: req.body.title,
         content: req.body.content
-
     };
 
     // const insert = conn.query(`INSERT INTO orders 
@@ -61,7 +60,7 @@ app.post('/confirmation',  async(req, res) =>{
 
     console.log(newPost);
 
-    res.render("confirmation");
+    res.render("confirmation", { newPost });
 });
 
 app.get('/entries', async (req, res) =>{
