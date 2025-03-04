@@ -10,9 +10,11 @@
     <h1>All Posts (Entries Page)</h1>
     
     <% for (let i = 0; i < posts.length; i++) { %>
+        <section class = "entry">
         <div><%= posts[i].title %></div>
         <div><%= posts[i].content %></div>
         <div><%= posts[i].author %></div>
+        </section>
     <% } %>
     <hr>
     <button>Create a New Post</button>
