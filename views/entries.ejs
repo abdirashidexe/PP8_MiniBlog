@@ -9,6 +9,10 @@
 <body>
     <h1>All Posts (Entries Page)</h1>
     
+    <% if (posts.length == 0) {%>
+        <div>No posts!</div>
+    <% } %>
+
     <% for (let i = 0; i < posts.length; i++) { %>
         <section class = "entry">
         <div><%= posts[i].title %></div>
