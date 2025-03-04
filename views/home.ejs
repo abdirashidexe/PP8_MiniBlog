@@ -8,15 +8,21 @@
 </head>
 <body>
     <h1>Create a New Post</h1>
-    <form action="confirmation" method="post">
+    <form action="confirmation" method="post" id = "submit">
         <fieldset>
             <input id = "author" name = "author" type="text" placeholder="Your name">
+            <span class = "err"  id = "error-name-1">Please submit a Name</span>
+            <span class = "err"  id = "error-name-2">Please submit a Name with no numbers</span>
 
             <input id = "title" name = "title" type="text" placeholder="Post title">
+            <span class = "err"  id = "error-title">Please submit a title</span>
+
 
             <textarea id = "content" name = "content" placeholder="Write your post"></textarea>
+            <span class = "err" id = "error-content">Content must be larger than 10 characters</span>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button>Submit</button>
     </form>
+    <script src="scripts/validation.js" defer></script>
 </body>
 </html>

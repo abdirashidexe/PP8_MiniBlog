@@ -27,3 +27,8 @@ button
 section{
     padding: 20px;
 }
+
+.err{
+    color:red;
+    display: none;
+}
