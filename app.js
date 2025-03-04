@@ -52,10 +52,10 @@ app.post('/confirmation',  async(req, res) =>{
         content: req.body.content
     };
 
-    // const insert = conn.query(`INSERT INTO orders 
-        // (author, title, content)
-        // values (?, ?, ?)`,
-        // [ newPost.author, newPost.title, newPost.content ]);
+    const insert = conn.query(`INSERT INTO posts 
+        (author, title, content)
+        values (?, ?, ?)`,
+        [ newPost.author, newPost.title, newPost.content ]);
 
 
     console.log(newPost);
