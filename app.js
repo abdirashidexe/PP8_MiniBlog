@@ -65,7 +65,9 @@ app.post('/confirmation',  async(req, res) =>{
 
 app.get('/entries', async (req, res) =>{
     const conn = await connect();
-    res.render("entries");
+    const posts = await conn.query(`SELECT * FROM posts
+        ORDER BY created_at DESC`);
+    res.render("entries", { posts });
 });
 
 
