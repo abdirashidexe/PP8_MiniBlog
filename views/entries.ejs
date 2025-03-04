@@ -8,7 +8,12 @@
 </head>
 <body>
     <h1>All Posts (Entries Page)</h1>
-    <p>temporary placeholder for content</p>
+    
+    <% for (let i = 0; i < posts.length; i++) { %>
+        <div><%= posts[i].title %></div>
+        <div><%= posts[i].content %></div>
+        <div><%= posts[i].author %></div>
+    <% } %>
     <hr>
     <button>Create a New Post</button>
     <hr>
